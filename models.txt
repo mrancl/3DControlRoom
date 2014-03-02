@@ -1,0 +1,8 @@
+Models2/room.bam
+Models/desk.bam
+Models/lcd_cd.bam
+Models/lcd_rd.bam
+Models/lcd_ld.bam
+Models/lcd_cu.bam
+Models/lcd_ru.bam
+Models/lcd_lu.bam

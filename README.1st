@@ -1,0 +1,3 @@
+﻿-Place Awesomium.dll, icudt38.dll and pawesomium.pyd in $PANDA_HOME/bin
+-Copy awesomium.py and media/ to a new folder under $PANDA_HOME/samples. 
+-Run the sample with: ppython awesomium

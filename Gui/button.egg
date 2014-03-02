@@ -1,0 +1,90 @@
+<Comment> {
+  "egg-texture-cards -wm clamp -g -.125,.125,-.025,.025 -p 147,52 -o button.egg normal.png hoover.png clicked.png"
+}
+<Texture> normal {
+  normal.png
+  <Scalar> wrap { clamp }
+}
+<Texture> hoover {
+  hoover.png
+  <Scalar> wrap { clamp }
+}
+<Texture> clicked {
+  clicked.png
+  <Scalar> wrap { clamp }
+}
+<Group> {
+  <Switch> { 1 }
+  <Scalar> fps { 2 }
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      -0.125 0.025 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 1 {
+      -0.125 -0.025 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      0.125 -0.025 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      0.125 0.025 0
+      <UV> { 1 1 }
+    }
+    <Vertex> 4 {
+      -0.125 0.025 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 5 {
+      -0.125 -0.025 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 6 {
+      0.125 -0.025 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 7 {
+      0.125 0.025 0
+      <UV> { 1 1 }
+    }
+    <Vertex> 8 {
+      -0.125 0.025 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 9 {
+      -0.125 -0.025 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 10 {
+      0.125 -0.025 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 11 {
+      0.125 0.025 0
+      <UV> { 1 1 }
+    }
+  }
+  <Group> normal {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { normal }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool } }
+    }
+  }
+  <Group> hoover {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { hoover }
+      <VertexRef> { 4 5 6 7 <Ref> { vpool } }
+    }
+  }
+  <Group> clicked {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { clicked }
+      <VertexRef> { 8 9 10 11 <Ref> { vpool } }
+    }
+  }
+}

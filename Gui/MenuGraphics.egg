@@ -1,0 +1,63 @@
+<Comment> {
+  "egg-texture-cards -wm clamp -g -.125,.125,-.025,.025 -p 250,50 -o MenuGraphics.egg menu0.png menu3.png"
+}
+<Texture> menu3 {
+  menu3.png
+  <Scalar> wrap { clamp }
+}
+<Texture> menu0 {
+  menu0.png
+  <Scalar> wrap { clamp }
+}
+<Group> {
+  <Switch> { 1 }
+  <Scalar> fps { 2 }
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      -0.175 0.2875 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 1 {
+      -0.175 -0.2875 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      0.175 -0.2875 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      0.175 0.2875 0
+      <UV> { 1 1 }
+    }
+    <Vertex> 4 {
+      -0.475 0.2125 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 5 {
+      -0.475 -0.2125 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 6 {
+      0.475 -0.2125 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 7 {
+      0.475 0.2125 0
+      <UV> { 1 1 }
+    }
+  }
+  <Group> menu0 {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { menu0 }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool } }
+    }
+  }
+  <Group> menu3 {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { menu3 }
+      <VertexRef> { 4 5 6 7 <Ref> { vpool } }
+    }
+  }
+}

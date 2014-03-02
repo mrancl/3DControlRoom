@@ -1,0 +1,87 @@
+<Comment> {
+  "egg-texture-cards -g -.293,.293,-.024,.024 -p 586,48 -o EnergyBar.egg EnergyBar.png EnergyFrame.png EnergyBack.png"
+}
+<Texture> EnergyFrame {
+  EnergyFrame.png
+}
+<Texture> EnergyBar {
+  EnergyBar.png
+}
+<Texture> EnergyBG {
+  EnergyBG.png
+}
+<Group> {
+  <Switch> { 1 }
+  <Scalar> fps { 2 }
+  <VertexPool> vpool {
+    <Vertex> 0 {
+      -0.293 0.024 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 1 {
+      -0.293 -0.024 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      0.293 -0.024 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      0.293 0.024 0
+      <UV> { 1 1 }
+    }
+    <Vertex> 4 {
+      -0.293 0.024 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 5 {
+      -0.293 -0.024 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 6 {
+      0.293 -0.024 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 7 {
+      0.293 0.024 0
+      <UV> { 1 1 }
+    }
+    <Vertex> 8 {
+      -0.293 0.024 0
+      <UV> { 0 1 }
+    }
+    <Vertex> 9 {
+      -0.293 -0.024 0
+      <UV> { 0 0 }
+    }
+    <Vertex> 10 {
+      0.293 -0.024 0
+      <UV> { 1 0 }
+    }
+    <Vertex> 11 {
+      0.293 0.024 0
+      <UV> { 1 1 }
+    }
+  }
+  <Group> EnergyBar {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { EnergyBar }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool } }
+    }
+  }
+  <Group> EnergyFrame {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { EnergyFrame }
+      <VertexRef> { 4 5 6 7 <Ref> { vpool } }
+    }
+  }
+  <Group> EnergyBG {
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { EnergyBG }
+      <VertexRef> { 8 9 10 11 <Ref> { vpool } }
+    }
+  }
+}
